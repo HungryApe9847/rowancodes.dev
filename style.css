@@ -15,3 +15,6 @@ body {
 a {
   color: #FFFFFF
 }
+.transparent {
+   opacity: 0.2;
+}
