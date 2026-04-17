@@ -9,8 +9,9 @@ let lossesText = `Losses: ${losses}`
 document.getElementById("scoreTracker").innerHTML = winsText;
 document.getElementById("loseTracker").innerHTML = lossesText;
 
-function button(user_choice){
+function play(user_choice){
     guessing = Math.round(Math.random()*100)
+    console.log("clicked:", user_choice);
     if (guessing > 66.5){
         botChoice = "rock"
     }
@@ -70,9 +71,6 @@ function button(user_choice){
     else if (wins < losses){
         document.getElementById("comments").innerHTML = `Wait... am I winning? I... I'm winning!!!`
     }
-    //`Wait... am I winning? I... I'm winning!!!`
-    //`I really am good at this, aren't I?`
-    //`Right, if you have hacked this game, please note that I beg for mercy and also some food.`
 
     winsText = `Wins: ${wins}`
     lossesText = `Losses: ${losses}`
