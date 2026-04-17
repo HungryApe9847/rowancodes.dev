@@ -52,6 +52,28 @@ function button(user_choice){
     else if (outcome === "lose"){
         losses += 1
     }
+    if (wins - 10 > losses){
+        document.getElementById("comments").innerHTML = `I underestimated you, human.`;
+    }
+    else if (wins - 5 > losses){
+        document.getElementById("comments").innerHTML = `Niiiicceee.`
+    }
+    else if (wins > losses){
+        document.getElementById("comments").innerHTML = `You seem to be worthy. Kind of.`
+    }
+    else if (wins < losses - 999999999){
+        document.getElementById("comments").innerHTML = `Right, if you have hacked this game, please note that I beg for mercy and also some food.`
+    }
+    else if (wins < losses - 5){
+        document.getElementById("comments").innerHTML = `I really am good at this, aren't I?`
+    }
+    else if (wins < losses){
+        document.getElementById("comments").innerHTML = `Wait... am I winning? I... I'm winning!!!`
+    }
+    //`Wait... am I winning? I... I'm winning!!!`
+    //`I really am good at this, aren't I?`
+    //`Right, if you have hacked this game, please note that I beg for mercy and also some food.`
+
     winsText = `Wins: ${wins}`
     lossesText = `Losses: ${losses}`
     document.getElementById("loseTracker").innerHTML = lossesText;
