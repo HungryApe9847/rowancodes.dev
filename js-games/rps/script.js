@@ -1,10 +1,13 @@
 let wins = 0
+let losses = 0
 let botChoice
 let outcome
 let guessing = Math.round(Math.random()*100)
 let winnerText
-let scoreText = `Score: ${wins}`
-document.getElementById("scoreTracker").innerHTML = scoreText;
+let winsText = `Wins: ${wins}`
+let lossesText = `Losses: ${losses}`
+document.getElementById("scoreTracker").innerHTML = winsText;
+document.getElementById("loseTracker").innerHTML = lossesText;
 
 function button(user_choice){
     guessing = Math.round(Math.random()*100)
@@ -46,7 +49,12 @@ function button(user_choice){
     if (outcome === "win"){
         wins += 1
     }
-    scoreText = `Score: ${wins}`
+    else if (outcome === "lose"){
+        losses += 1
+    }
+    winsText = `Wins: ${wins}`
+    lossesText = `Losses: ${losses}`
+    document.getElementById("loseTracker").innerHTML = lossesText;
     document.getElementById("result").innerHTML = winnerText;
-    document.getElementById("scoreTracker").innerHTML = scoreText;
+    document.getElementById("scoreTracker").innerHTML = winsText;
 }
